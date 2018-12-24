@@ -4,7 +4,7 @@
 
 # Instagram Layout Clone
 
-<img src="screenshoots/main.png" alt="main page"  width="400" height="auto"/>
+<img src="screenshoots/feed.png" alt="main page"  width="400" height="auto"/>
 
 ## How To Use ?
 
