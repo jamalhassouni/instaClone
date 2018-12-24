@@ -22,4 +22,4 @@
 
 ## License
 
-[MIT](License.md)
+- [MIT](License.md)
