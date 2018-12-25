@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import { Text, StyleSheet, View, ScrollView } from "react-native";
-import { Icon, Container, Content, Thumbnail } from "native-base";
+import {
+  Icon,
+  Container,
+  Content,
+  Thumbnail,
+  Header,
+  Left,
+  Right,
+  Body
+} from "native-base";
 import CardComponent from "../CardComponent";
 
 export default class HomeTab extends Component {
@@ -14,6 +23,17 @@ export default class HomeTab extends Component {
   render() {
     return (
       <Container style={styles.container}>
+        <Header style={{ backgroundColor: "white" }}>
+          <Left>
+            <Icon name="ios-camera" style={{ paddingLeft: 10 }} />
+          </Left>
+          <Body>
+            <Text>Instaclone</Text>
+          </Body>
+          <Right>
+            <Icon name="ios-send" style={{ paddingRight: 10 }} />
+          </Right>
+        </Header>
         <Content>
           <View style={{ height: 100 }}>
             <View
@@ -90,7 +110,7 @@ export default class HomeTab extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white"
+    backgroundColor: "#fff"
   },
   thumbnail: {
     marginHorizontal: 5,
