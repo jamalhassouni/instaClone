@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View } from "react-native";
-import { Icon, Container, Content } from "native-base";
+import { Text, StyleSheet, View, ScrollView } from "react-native";
+import { Icon, Container, Content, Thumbnail } from "native-base";
 import CardComponent from "../CardComponent";
 
 export default class HomeTab extends Component {
@@ -15,6 +15,67 @@ export default class HomeTab extends Component {
     return (
       <Container style={styles.container}>
         <Content>
+          <View style={{ height: 100 }}>
+            <View
+              style={{
+                flex: 1,
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                paddingHorizontal: 7
+              }}
+            >
+              <Text style={{ fontWeight: "bold" }}>Stories</Text>
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Icon name="md-play" style={{ fontSize: 14 }} />
+                <Text style={{ fontWeight: "bold" }}> Watch all</Text>
+              </View>
+            </View>
+            <View style={{ flex: 3 }}>
+              <ScrollView
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{
+                  alignItems: "center",
+                  paddingStart: 5,
+                  paddingEnd: 5
+                }}
+              >
+                <Thumbnail
+                  style={styles.thumbnail}
+                  source={require("../../assets/images/avatars/me.jpg")}
+                />
+                <Thumbnail
+                  style={styles.thumbnail}
+                  source={require("../../assets/images/avatars/alexandergarcia.png")}
+                />
+                <Thumbnail
+                  style={styles.thumbnail}
+                  source={require("../../assets/images/avatars/andrea.schmidt.png")}
+                />
+                <Thumbnail
+                  style={styles.thumbnail}
+                  source={require("../../assets/images/avatars/derek.russel.png")}
+                />
+                <Thumbnail
+                  style={styles.thumbnail}
+                  source={require("../../assets/images/avatars/jmitch.png")}
+                />
+                <Thumbnail
+                  style={styles.thumbnail}
+                  source={require("../../assets/images/avatars/monicaa.png")}
+                />
+                <Thumbnail
+                  style={styles.thumbnail}
+                  source={require("../../assets/images/avatars/andrea.schmidt.png")}
+                />
+                <Thumbnail
+                  style={styles.thumbnail}
+                  source={require("../../assets/images/avatars/derek.russel.png")}
+                />
+              </ScrollView>
+            </View>
+          </View>
           <CardComponent imageSource="1" likes="101" />
           <CardComponent imageSource="2" likes="441" />
           <CardComponent imageSource="3" likes="201" />
@@ -30,5 +91,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white"
+  },
+  thumbnail: {
+    marginHorizontal: 5,
+    borderColor: "pink",
+    borderWidth: 2
   }
 });
