@@ -28,7 +28,15 @@ export default class HomeTab extends Component {
             <Icon name="ios-camera" style={{ paddingLeft: 10 }} />
           </Left>
           <Body>
-            <Text>Instaclone</Text>
+            <Text
+              style={{
+                fontFamily: "Billabong",
+                fontSize: 25,
+                marginTop: 10
+              }}
+            >
+              Instaclone
+            </Text>
           </Body>
           <Right>
             <Icon name="ios-send" style={{ paddingRight: 10 }} />

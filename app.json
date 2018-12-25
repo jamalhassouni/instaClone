@@ -24,6 +24,8 @@
     "androidStatusBar": {
       "barStyle": "light-content",
       "backgroundColor": "#334393"
-    }
+    },
+    "description": "Instagram App UI Clone",
+    "githubUrl": "https://github.com/jamalhassouni/instaClone"
   }
 }
