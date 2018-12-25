@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, Platform } from "react-native";
-import {
-  createBottomTabNavigator,
-  createMaterialTopTabNavigator
-} from "react-navigation";
-import { Icon } from "native-base";
+import { StyleSheet, Platform } from "react-native";
+import { createMaterialTopTabNavigator } from "react-navigation";
 import HomeTab from "./AppTabNavigator/HomeTab";
 import AddMediaTab from "./AppTabNavigator/AddMediaTab";
 import LikesTab from "./AppTabNavigator/LikesTab";
@@ -13,16 +9,7 @@ import SearchTab from "./AppTabNavigator/SearchTab";
 
 export class MainScreen extends Component {
   static navigationOptions = {
-    headerLeft: (
-      <Icon
-        name="ios-camera"
-        style={{
-          paddingLeft: 10
-        }}
-      />
-    ),
-    title: "Instaclone",
-    headerRight: <Icon name="ios-send" style={{ paddingRight: 10 }} />
+    header: null
   };
 
   render() {
@@ -60,7 +47,8 @@ const AppTabNavigator = createMaterialTopTabNavigator(
           android: {
             backgroundColor: "white"
           }
-        })
+        }),
+        shadowColor: "rgba(0, 0, 0, 0.24)"
       },
       activeTintColor: "#000",
       inactiveTintColor: "#d1cece",
