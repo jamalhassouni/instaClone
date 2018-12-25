@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { Text, Image } from "react-native";
 import {
   Card,
   CardItem,
   Thumbnail,
   Body,
   Left,
-  Right,
   Button,
   Icon
 } from "native-base";
@@ -18,7 +17,11 @@ class CardComponnet extends Component {
       "2": require("../assets/images/feed_images/2.jpg"),
       "3": require("../assets/images/feed_images/3.jpg"),
       "4": require("../assets/images/feed_images/4.jpg"),
-      "5": require("../assets/images/feed_images/5.jpg")
+      "5": require("../assets/images/feed_images/5.jpg"),
+      "6": require("../assets/images/feed_images/6.jpg"),
+      "7": require("../assets/images/feed_images/7.jpg"),
+      "8": require("../assets/images/feed_images/8.jpg"),
+      "9": require("../assets/images/feed_images/9.jpg")
     };
 
     return (
@@ -70,11 +73,3 @@ class CardComponnet extends Component {
   }
 }
 export default CardComponnet;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
