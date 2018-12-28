@@ -6,14 +6,29 @@ import AddMediaTab from "./AppTabNavigator/AddMediaTab";
 import LikesTab from "./AppTabNavigator/LikesTab";
 import ProfileTab from "./AppTabNavigator/ProfileTab";
 import SearchTab from "./AppTabNavigator/SearchTab";
+import { Font } from "expo";
 
 export class MainScreen extends Component {
+  constructor() {
+    super();
+    this.state = {
+      fontLoaded: false
+    };
+  }
   static navigationOptions = {
     header: null
   };
+  async componentDidMount() {
+    await Font.loadAsync({
+      Billabong: require("../assets/fonts/Billabong.ttf")
+    });
+    this.setState({ fontLoaded: true });
+  }
 
   render() {
-    return <AppTabNavigator style={styles.container} />;
+    return (
+      this.state.fontLoaded && <AppTabNavigator style={styles.container} />
+    );
   }
 }
 
