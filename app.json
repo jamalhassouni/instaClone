@@ -27,5 +27,9 @@
     },
     "description": "Instagram App UI Clone",
     "githubUrl": "https://github.com/jamalhassouni/instaClone"
+  },
+  "updates": {
+    "enabled": true,
+    "checkAutomatically": "ON_LOAD"
   }
 }
