@@ -5,3 +5,4 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+/assets/images/feed_images/9.jpg
