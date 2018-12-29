@@ -11,13 +11,53 @@ import {
   Body
 } from "native-base";
 import CardComponent from "../CardComponent";
+import { Font } from "expo";
 
 export default class HomeTab extends Component {
+  constructor() {
+    super();
+    this.state = {
+      fontLoaded: false
+    };
+  }
+  async componentDidMount() {
+    await Font.loadAsync({
+      Billabong: require("../../assets/fonts/Billabong.ttf")
+    });
+    this.setState({ fontLoaded: true });
+  }
   static navigationOptions = {
     tabBarLabel: "Home",
     tabBarIcon: ({ tintColor, focused }) => (
       <Icon name={"ios-home"} size={26} style={{ color: tintColor }} />
     )
+  };
+
+  renderTitle = () => {
+    if (this.state.fontLoaded) {
+      return (
+        <Text
+          style={{
+            fontFamily: "Billabong",
+            fontSize: 25,
+            marginTop: 10
+          }}
+        >
+          Instaclone
+        </Text>
+      );
+    } else {
+      return (
+        <Text
+          style={{
+            fontSize: 25,
+            marginTop: 10
+          }}
+        >
+          Instaclone
+        </Text>
+      );
+    }
   };
 
   render() {
@@ -27,17 +67,7 @@ export default class HomeTab extends Component {
           <Left>
             <Icon name="ios-camera" style={{ paddingLeft: 10 }} />
           </Left>
-          <Body>
-            <Text
-              style={{
-                fontFamily: "Billabong",
-                fontSize: 25,
-                marginTop: 10
-              }}
-            >
-              Instaclone
-            </Text>
-          </Body>
+          <Body>{this.renderTitle()}</Body>
           <Right>
             <Icon name="ios-send" style={{ paddingRight: 10 }} />
           </Right>
