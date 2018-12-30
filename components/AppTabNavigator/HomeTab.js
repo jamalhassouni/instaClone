@@ -72,26 +72,7 @@ export default class HomeTab extends Component {
           </Right>
         </Header>
         <Content>
-          <View style={{ height: 100 }}>
-            <View
-              style={{
-                flex: 1,
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignItems: "center",
-                paddingHorizontal: 7
-              }}
-            >
-              <Text style={{ fontWeight: "bold" }}>Stories</Text>
-              <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Icon name="md-play" style={{ fontSize: 14 }} />
-                <Text style={{ fontWeight: "bold" }}> Watch all</Text>
-              </View>
-            </View>
-            <View style={{ flex: 3 }}>
-              <Stories />
-            </View>
-          </View>
+          <Stories />
           <CardComponent imageSource="1" likes="101" />
           <CardComponent imageSource="2" likes="441" />
           <CardComponent imageSource="3" likes="201" />
