@@ -4,7 +4,6 @@ import {
   Icon,
   Container,
   Content,
-  Thumbnail,
   Header,
   Left,
   Right,
@@ -12,7 +11,7 @@ import {
 } from "native-base";
 import CardComponent from "../CardComponent";
 import { Font } from "expo";
-
+import Stories from "../Stories";
 export default class HomeTab extends Component {
   constructor() {
     super();
@@ -39,7 +38,7 @@ export default class HomeTab extends Component {
         <Text
           style={{
             fontFamily: "Billabong",
-            fontSize: 25,
+            fontSize: 30,
             marginTop: 10
           }}
         >
@@ -90,48 +89,7 @@ export default class HomeTab extends Component {
               </View>
             </View>
             <View style={{ flex: 3 }}>
-              <ScrollView
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{
-                  alignItems: "center",
-                  paddingStart: 5,
-                  paddingEnd: 5
-                }}
-              >
-                <Thumbnail
-                  style={styles.thumbnail}
-                  source={require("../../assets/images/avatars/me.jpg")}
-                />
-                <Thumbnail
-                  style={styles.thumbnail}
-                  source={require("../../assets/images/avatars/alexandergarcia.png")}
-                />
-                <Thumbnail
-                  style={styles.thumbnail}
-                  source={require("../../assets/images/avatars/andrea.schmidt.png")}
-                />
-                <Thumbnail
-                  style={styles.thumbnail}
-                  source={require("../../assets/images/avatars/derek.russel.png")}
-                />
-                <Thumbnail
-                  style={styles.thumbnail}
-                  source={require("../../assets/images/avatars/jmitch.png")}
-                />
-                <Thumbnail
-                  style={styles.thumbnail}
-                  source={require("../../assets/images/avatars/monicaa.png")}
-                />
-                <Thumbnail
-                  style={styles.thumbnail}
-                  source={require("../../assets/images/avatars/andrea.schmidt.png")}
-                />
-                <Thumbnail
-                  style={styles.thumbnail}
-                  source={require("../../assets/images/avatars/derek.russel.png")}
-                />
-              </ScrollView>
+              <Stories />
             </View>
           </View>
           <CardComponent imageSource="1" likes="101" />
@@ -149,10 +107,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff"
-  },
-  thumbnail: {
-    marginHorizontal: 5,
-    borderColor: "pink",
-    borderWidth: 2
   }
 });
