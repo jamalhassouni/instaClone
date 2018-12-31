@@ -2,14 +2,7 @@ import React, { Component } from "react";
 import { ScrollView, StyleSheet, View, Text } from "react-native";
 import { Icon, Thumbnail } from "native-base";
 import GradientBox from "./GradientBox";
-const colors = [
-  //"#c32aa3",
-  "#cd486b",
-  // "#fbad50",
-  "#f46f30",
-  "#bc2a8d",
-  "#e95950"
-];
+import { storyColors } from "./utils/Colors";
 export default class Stories extends Component {
   username = name => {
     if (name.length >= 11) {
@@ -59,7 +52,7 @@ export default class Stories extends Component {
             </View>
             <View style={styles.vbox}>
               <GradientBox
-                colors={colors}
+                colors={storyColors}
                 start={[1, 0]}
                 end={[0, 1]}
                 borderWidth={3}
@@ -78,7 +71,7 @@ export default class Stories extends Component {
             </View>
             <View style={styles.vbox}>
               <GradientBox
-                colors={colors}
+                colors={storyColors}
                 start={[1, 0]}
                 end={[0, 1]}
                 borderWidth={3}
@@ -96,7 +89,7 @@ export default class Stories extends Component {
 
             <View style={styles.vbox}>
               <GradientBox
-                colors={colors}
+                colors={storyColors}
                 start={[1, 0]}
                 end={[0, 1]}
                 borderWidth={3}
@@ -114,7 +107,7 @@ export default class Stories extends Component {
 
             <View style={styles.vbox}>
               <GradientBox
-                colors={colors}
+                colors={storyColors}
                 start={[1, 0]}
                 end={[0, 1]}
                 borderWidth={3}
@@ -132,7 +125,7 @@ export default class Stories extends Component {
 
             <View style={styles.vbox}>
               <GradientBox
-                colors={colors}
+                colors={storyColors}
                 start={[1, 0]}
                 end={[0, 1]}
                 borderWidth={3}
@@ -150,7 +143,7 @@ export default class Stories extends Component {
 
             <View style={styles.vbox}>
               <GradientBox
-                colors={colors}
+                colors={storyColors}
                 start={[1, 0]}
                 end={[0, 1]}
                 borderWidth={3}
@@ -167,7 +160,7 @@ export default class Stories extends Component {
             </View>
             <View style={styles.vbox}>
               <GradientBox
-                colors={colors}
+                colors={storyColors}
                 start={[1, 0]}
                 end={[0, 1]}
                 borderWidth={3}
@@ -184,7 +177,7 @@ export default class Stories extends Component {
             </View>
             <View style={styles.vbox}>
               <GradientBox
-                colors={colors}
+                colors={storyColors}
                 start={[1, 0]}
                 end={[0, 1]}
                 borderWidth={3}
